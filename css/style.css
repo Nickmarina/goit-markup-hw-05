@@ -58,8 +58,8 @@ a{
 /* навигация в head */
 
 .header{
-    background-color: var(--white-color);
     border-bottom: 1px solid #ECECEC;
+    background-color: var(--white-color);  
 }
 .navigation{
     display: flex;
@@ -106,11 +106,12 @@ ul a{
 
 .nav-list .item{
     position: relative;
-    transition: color 250ms var(--timing-cubic);
     margin: 0;
     padding: 0;
     padding-top: 32px;
     padding-bottom: 32px;
+
+    transition: color 250ms var(--timing-cubic);
 }
 
 .nav-list .item:not(:last-child){
@@ -149,8 +150,9 @@ ul a{
 
 .contact-list a{
     display: inline-flex;
-    transition: color 250ms var(--timing-cubic);
     color: var(--paragraph-color);
+
+    transition: color 250ms var(--timing-cubic);
 }
 
 .contact-list a:hover,
@@ -166,11 +168,12 @@ ul a{
 
 .contact-list .icon{
     align-items: center;
-    transition: fill 250ms var(--timing-cubic);
     width: 16px;
     height: 16px;
     margin-right: 10px;
     fill: var(--icon-color);
+
+    transition: fill 250ms var(--timing-cubic);
   }
 
 /* hero */
@@ -179,7 +182,6 @@ ul a{
     height: 600px;
     margin-left: auto;
     margin-right: auto; 
-    /* outline: 2px solid violet; */
     background-color: var(--sections-background);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
                     url(../images/main-page/hero-img.jpg);
@@ -201,14 +203,15 @@ ul a{
 .hero button{
     display: inline-block;
     padding: 10px 32px;
+    border: none;
+    border-radius: 4px;
     background-color: var(--selection-color);
     color: var(--white-color);
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.06em;
-    border: none;
-    border-radius: 4px;
+
 }
 
 /*   заголовки страницы */ 
@@ -276,9 +279,11 @@ ul a{
 }
 
 .features-list .item{
+    position: relative;
     width: calc((100% - 60px) /3);
+    height: 294px;
     margin-right: 30px;
-
+    margin-bottom: 94px;
 }
 
 .features-list .item:last-child{
@@ -289,7 +294,21 @@ ul a{
     padding: 0;
     margin: 0;
 }
-
+.feature-title{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    color: var(--white-color);
+    background-color: rgba(47, 48, 58, 0.8);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-transform: uppercase;
+}
 /* секция о команде */
 
 .command-section{
@@ -303,9 +322,10 @@ ul a{
     width: calc((100% - 90px) /4);
     margin-right: 30px;
     margin-bottom: 94px;
-    background-color: var(--white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    background-color: var(--white-color);
+
 }
 
 .command-list .item:last-child{
@@ -352,21 +372,22 @@ ul a{
 }
     
 .command-social-list .icon{
-    transition: fill 250ms var(--timing-cubic), background-color 250ms var(--timing-cubic);
     width: 44px;
     height: 44px;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 50%;
     fill: var(--icon-color);
+
+    transition: fill 250ms var(--timing-cubic), background-color 250ms var(--timing-cubic);
 }
 
 .command-social-list .icon:hover, 
 .command-social-list .icon:focus{
-    fill: var(--white-color);
-    background-color: var(--selection-color);
     border:1px;
-    border-radius: 50%;   
+    border-radius: 50%; 
+    fill: var(--white-color);
+    background-color: var(--selection-color);    
 }
 
 /* секция клиентов */
@@ -376,13 +397,14 @@ ul a{
 }
 
 .client-list .item{
-    transition: border 250ms var(--timing-cubic);
     width: calc((100% - 150px)/6);
     margin-right: 30px;
     margin-bottom: 94px;
     border: 1px solid #AFB1B8;
     box-sizing: border-box;
-    border-radius: 4px;
+    border-radius: 4px;    
+
+    transition: border 250ms var(--timing-cubic);
 }
 
 .client-list:last-child{
@@ -390,12 +412,13 @@ ul a{
 }
 
 .client-list .icon{
-    transition:fill 250ms var(--timing-cubic);
     width: 170px;
     height: 90px;
     padding-top: 20px;
     padding-bottom: 20px;
     fill: var(--icon-color);
+
+    transition:fill 250ms var(--timing-cubic);
 }
 
 .client-list .item:hover,
@@ -472,33 +495,35 @@ address .item{
 }
 
 .links-list .icon{
-    transition: fill 250ms var(--timing-cubic), background-color 250ms var(--timing-cubic);
     width: 44px;
     height: 44px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;   
+    background: rgba(255, 255, 255, 0.1);
     fill: var(--icon-color);
+
+    transition: fill 250ms var(--timing-cubic), background-color 250ms var(--timing-cubic);
 }
 
 .links-list .icon:hover, 
 .links-list .icon:focus{
-    fill: var(--white-color);
-    background-color: var(--selection-color);
     border:1px;
-    border-radius: 50%;   
+    border-radius: 50%; 
+    fill: var(--white-color);
+    background-color: var(--selection-color);    
 }
 
 /* Модальное окно */
 .backdrop{
     position: fixed;
-    transition: opacity 250ms var(--timing-cubic);
     top:0;
     left:0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
+
+    transition: opacity 250ms var(--timing-cubic);
 }
 
 .backdrop.is-hidden{
@@ -506,16 +531,22 @@ address .item{
     pointer-events: none;
 }
 
+.backdrop.is-hidden .modal{
+    transform:translate(-50%, -50%) scale(0.9);
+}
+
 .modal{
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 50%;   
     width: 528px;
     height: 581px;
     background-color: var(--white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms var(--timing-cubic); 
 }
 
 .modal button{
@@ -526,6 +557,13 @@ address .item{
     height: 30px;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--white-color);
+}
+
+.modal .icon{
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
 
 /* PORTFOLIO */
@@ -544,17 +582,18 @@ address .item{
 }
 
 .projects button{
-    transition: background-color 250ms var(--timing-cubic), color 250ms var(--timing-cubic);
     padding: 6px 22px;
     margin-right: 30px;
+    border-radius: 4px;
+    border: none;
     background: var(--background);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.6;
     text-align: center;
     letter-spacing: 0.03em;
-    border-radius: 4px;
-    border: none;
+    
+    transition: background-color 250ms var(--timing-cubic), color 250ms var(--timing-cubic);
 }
 
 .projects button:hover,
@@ -567,15 +606,15 @@ address .item{
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
-    }
+}
 
-.projects-list .item{    
+.projects-list .item{ 
     width: calc((100% - 2*30px) /3);
     margin-right: 30px;
     margin-bottom: 30px;
-    background-color: var(--white-color);
     border: 1px solid #EEEEEE;
     box-sizing: border-box;
+    background-color: var(--white-color);
 }
 
 .projects-list .item:nth-child(3n){
@@ -591,10 +630,51 @@ address .item{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.projects-list .item:hover .project-thumb::before{
+    transform: translateY(0);
+}
+
+.projects-list .item:hover .text{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.project-thumb{
+    position: relative;
+    overflow: hidden;
+    height: 294px;
+}
+
+.project-thumb::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transform: translateY(100%);
+    transition: transform 250ms var(--timing-cubic);
+}
+
+
+.project-thumb .text{
+    position: absolute;
+    opacity: 0;
+    top: 63px;
+    left: 24px;
+    color: var(--white-color);
+    font-size: 18px;
+    line-height: 1.55;
+
+    transform: translateY(100%);
+    transition: transform 250ms var(--timing-cubic), opacity 250ms var(--timing-cubic);
+}
+
+
 .projects-list img{
     padding: 0;
     margin: 0;
-    width: 370px;
+    /* width: 370px; */
     margin-bottom: 20px;
 }
 

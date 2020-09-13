@@ -80,9 +80,18 @@
             <div class="container">
                 <h3 class="content-title">Чем мы занимаемся</h3>
                 <ul class="features-list">
-                    <li class="item"> <img src="./images/main-page/img-desktop.jpg" alt="Десктопные приложения"></li>
-                    <li class="item"><img src="./images/main-page/img-mobile.jpg" alt="Мобильные приложения"></li>
-                    <li class="item"><img src="./images/main-page/img-designe.jpg" alt="Дизайнерские решения"></li>
+                    <li class="item"> 
+                        <img src="./images/main-page/img-desktop.jpg" alt="Десктопные приложения">
+                        <p class="feature-title">Десктопные приложения</p>
+                    </li>
+                    <li class="item">
+                        <img src="./images/main-page/img-mobile.jpg" alt="Мобильные приложения">
+                        <p class="feature-title">Мобильные приложения</p>
+                    </li>
+                    <li class="item">
+                        <img src="./images/main-page/img-designe.jpg" alt="Дизайнерские решения">
+                        <p class="feature-title">Дизайнерские решения</p>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -331,7 +340,11 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button type="button" data-modal-close></button>
+            <button type="button" data-modal-close aria-label="modal icon">
+                <svg class="icon">
+                    <use href="./images/sprite.svg#icon-modal-close-icon"></use>
+                </svg>
+            </button>
         </div>
     </div>
 
